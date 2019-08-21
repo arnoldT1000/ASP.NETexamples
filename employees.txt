@@ -1,0 +1,63 @@
+This program works:
+http://localhost/api/employees
+http://localhost/api/employees/1/
+
+EmployeesController.cs
+
+using APIDemo.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace APIDemo.Controllers
+{
+    public class EmployeesController : ApiController
+    {
+        Employee[] employees = new Employee[]{
+         new Employee { ID = 1, Name = "Mark", JoiningDate =
+            DateTime.Parse(DateTime.Today.ToString()), Age = 30 },
+         new Employee { ID = 2, Name = "Allan", JoiningDate =
+            DateTime.Parse(DateTime.Today.ToString()), Age = 35 },
+         new Employee { ID = 3, Name = "Johny", JoiningDate =
+            DateTime.Parse(DateTime.Today.ToString()), Age = 21 }
+      };
+
+        public IEnumerable<Employee> GetAllEmployees()
+        {
+            return employees;
+        }
+
+        public IHttpActionResult GetEmployee(int id)
+        {
+            var employee = employees.FirstOrDefault((p) => p.ID == id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return Ok(employee);
+        }
+    }
+}
+
+/Models/
+class: Employee.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace APIDemo.Models
+{
+    public class Employee
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public DateTime JoiningDate { get; set; }
+        public int Age { get; set; }
+    }
+}
+
