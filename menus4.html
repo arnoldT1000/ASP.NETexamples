@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-submenu {
+  left: 400px;
+  width: 500px;
+  height: 500px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-submenu a {
+  position: relative;
+  top: -40px;
+  left: 210px;
+  width: 150px;
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".vertical-submenu").hide();
+  $("#mark").hover(function(){
+    $(".vertical-submenu").toggle();
+  });
+});
+</script>
+</head>
+<body>
+
+<h1>Vertical Menu</h1>
+
+<div class="vertical-menu">
+  <a href="#" class="active">Home</a>
+  <a href="#" id="mark">Link 1</a>
+</div>
+	<div class="vertical-submenu">
+		 
+		 <a href="#">Link 1</a>
+  		 <a href="#">Link 2</a>
+		 <a href="#">Link 3</a>
+        </div>
+  
+
+</body>
+</html>
