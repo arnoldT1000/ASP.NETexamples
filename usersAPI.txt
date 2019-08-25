@@ -1,0 +1,48 @@
+1.Create a table in Sql Server.
+2.Create a web api application.
+3.Right click on model and select ADO.NET Entity Data Model, name: UserModel.
+4.Create a connection and select User Table.
+5.Check connection settings in App.Config as: UserEntities. Click OK
+6.Select User table and Name Model Namespace as: UserModel.
+7.Go to controller folder, right click add Empty Web API 2 Controller. Name: UserController.
+8.Replace UserController.cs with:
+
+UserController.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using WebApplication23.Models;
+
+namespace WebApplication23.Controllers
+{
+    public class UserController : ApiController
+    {
+        public IEnumerable<User> Get()
+        {
+            using (UserEntities entities = new UserEntities())
+            {
+                return entities.Users.ToList();
+            }
+        }
+
+        public User Get(int id)
+        {
+            using (UserEntities entities = new UserEntities())
+            {
+                return entities.Users.FirstOrDefault(e => e.UserId == id);
+            }
+        }
+    }
+}
+
+all users 
+/api/User/
+[{"UserId":1,"UserName":"JDoe","Password":"passwordA"},{"UserId":2,"UserName":"ASmith","Password":"passwordB"},{"UserId":3,"UserName":"HFord","Password":"passwordC"}]
+
+by UserId
+/api/User/1/
+{"UserId":1,"UserName":"JDoe","Password":"passwordA"}
