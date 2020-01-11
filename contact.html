@@ -34,7 +34,7 @@ function myMove() {
 }
 
 .col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;height: 69%;}
+.col-2 {width: 16.66%;height: 55%;}
 .col-3 {width: 25%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
@@ -42,7 +42,7 @@ function myMove() {
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
+.col-10 {width: 83.33%;height: 55%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
@@ -60,6 +60,15 @@ h2 { 		color:blue
 		-webkit-animation: rotation 5s linear;
 }
 
+#texts {
+		position:absolute;
+		top: 60%;
+		width:15%;
+		left: 60%;
+		align: left;
+		padding: 8px;
+}
+
 #list {
 		position:relative;
 		width:40%;
@@ -68,44 +77,40 @@ h2 { 		color:blue
 		
 }
 
-.column-left {
-  float: left;
-  width: 33.333%;
+.column-top {
+  
+  width: 80%;
+  height: 40%;
 }
 
-.column-right {
-  float: right;
-  width: 33.333%;
+
+
+.column-bottom {
+  height:40%;
 }
 
-.column-center {
-  display: inline-block;
-  width: 33.333%;
-}
 
-.dummy_page {
-  height: 450px;
-  width: 100%;
-  background-color: #f0f0f0;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 60px 0px;
-}
+
+
+
 
 .footer {
+  top:60%;
   width: 100%;
   position: relative;
-  height: auto;
+  height: 8%;
   background-color: #070617;
 }
 .footer .col {
-  width: 350px;
-  height: auto;
-  float: left;
+  position: absolute;
+  left:5px;
+  top:10%; 
+  width: 99%;
+  align: left;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  padding: 0px 20px 20px 20px;
+  
 }
 .footer .col h1 {
   margin: 0;
@@ -113,7 +118,7 @@ h2 { 		color:blue
   font-family: inherit;
   font-size: 12px;
   line-height: 17px;
-  padding: 20px 0px 5px 0px;
+  padding: 0px 0px 0px 0px;
   color: rgba(255,255,255,0.2);
   font-weight: normal;
   text-transform: uppercase;
@@ -126,10 +131,10 @@ h2 { 		color:blue
 }
 .footer .col ul li {
   color: #999999;
-font-size: 14px;
+  font-size: 14px;
   font-family: inherit;
   font-weight: bold;
-  padding: 5px 0px 5px 0px;
+  padding: 0px 0px 0px 0px;
   cursor: pointer;
   transition: .2s;
   -webkit-transition: .2s;
@@ -218,7 +223,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 14px;
   text-decoration: none;
 }
 
@@ -229,15 +234,61 @@ li a:hover:not(.active) {
 .active {
   background-color: blue;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  
+  width: 20%;
+  padding: 5px;
+}
+
+
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
 </style>
 </head>
 <body onload="myMove()">
-
 <div class="header">
   
-  <img id="loading" src="Animations.png" height="100" width="100">
+  
   <div id="head">
-                <h1 id="01">SUCCESS PAGE</h1>
+                <h1 id="01">NEWS PAGE</h1>
   </div>
 </div>
 
@@ -255,50 +306,77 @@ li a:hover:not(.active) {
 </div>
 
 <div class="col-10">
-  <div class="dummy_page">
+
+
+	
  
 <div class="cols">
-  <div class="column-center">
-            <h2 color="blue">Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+  <div class="column-top"></div>
   </div>
-  <div class="column-left"><h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p></div>
-  <div class="column-right">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+  
+  <div class="column-bottom">
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="girl1.jpg" style="height:40%;width:40%;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="girl2.jpg" style="height:40%;width:40%;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="girl3.jpg" style="height:40%;width:40%;">
+  
+</div>
+
+</div>
+<br>
+
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  
+  slides[slideIndex-1].style.display = "block";  
+  
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+
   </div>
-</div>  
+ 
 </div>
 <!-- FOOTER START -->
 <div class="footer">
   <div class="contain">
   <div class="col">
-    
-    <ul>
+      <ul>
     	<li><a class="active" href="resp.html">Home</a></li>
 	<li><a href="news.html">News</a></li>
 	<li><a href="contact.html">Contact</a></li>
 	<li><a href="about.html">About</a></li>
       
-    </ul>
-  </div>
+       </ul>
+    </div>
+    
+  
   
 <div class="clearfix"></div>
 </div>
@@ -308,5 +386,8 @@ li a:hover:not(.active) {
 
 </div>
 
+
+
+
 </body>
-</html>
+</html> 
