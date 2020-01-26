@@ -1,0 +1,64 @@
+rdAdd.aspx
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rdAdd.aspx.cs" Inherits="WebApplication33.rdAdd" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                <asp:Label ID="Label1" runat="server" Font-Size="Large" ForeColor="Crimson"></asp:Label>
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                    <asp:ListItem Text ="Blizzak DM-12" Value="240" />
+    <asp:ListItem Text ="Latitude X-ICE" Value="250" />
+    <asp:ListItem Text ="Ice Zero" Value="245" />
+    <asp:ListItem Text ="Observe GSI" Value="236" />
+                </asp:RadioButtonList>
+                <br />
+                <asp:RadioButtonList ID="RadioButtonList2" runat="server">
+                    <asp:ListItem Text ="LEO 18X8" Value="180" />
+    <asp:ListItem Text ="APOLLO 18X8" Value="175" />
+    <asp:ListItem Text ="ORION 17X7.5" Value="170" />
+    <asp:ListItem Text ="ARIES 17X7" Value="170" />
+                </asp:RadioButtonList>
+                <br />
+                <asp:Button ID="Button1" runat="server" Text="Calculate" OnClick="Button1_Click" />
+                <hr />
+                
+            </div>
+    </form>
+</body>
+</html>
+
+
+rdAdd.aspx.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebApplication33
+{
+    public partial class rdAdd : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            String selectedValue = (RadioButtonList1.SelectedValue);
+            int val = Int32.Parse(selectedValue.Substring(0, 3));
+
+            String selectedValue2 = (RadioButtonList2.SelectedValue);
+            int val2 = Int32.Parse(selectedValue2.Substring(0, 3));
+            Label1.Text=Label1.Text="Total with 15% Tax is: " + ((val+val2) * 1.15).ToString();
+        }
+    }
+}

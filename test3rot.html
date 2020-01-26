@@ -1,0 +1,114 @@
+<html>
+<head>
+<style>
+
+.parent{
+    width: 100%
+}
+
+.element {
+  float:left;
+    display: inline-block;
+    width: 33%;
+  
+  
+}
+
+.one { 
+  
+  animation: one 5s infinite;
+  
+}
+
+.two {
+  transform: rotateY(0deg);
+  animation: two 5s infinite;
+  
+  
+}
+
+.three {
+  
+  animation: three 5s infinite;
+  
+ 
+}
+
+@keyframes one {
+  0% {
+    opacity:1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity:0;
+    transform: translateX(200px);
+  }
+}
+
+@keyframes two {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes three {
+  0% {
+    
+    opacity:1;
+    transform: translateX(0px);
+  }
+  100% {
+    
+    opacity:0;
+    transform: translateX(-200px);
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.l2 {left:300px;position:relative;}
+</style>
+</head>
+<body>
+
+<div class="parent">
+<div class="element one">
+ <img src="rim.jpg" width="150px" height="150px">
+</div>
+<div class="element two">
+  <img src="car.jpg" width="150px" height="150px" >
+</div>
+<div class="element three">
+  <img src="tire.jpg" width="150px" height="150px">
+</div>
+
+<br><br>
+<div class="element">
+<p>Rims</p><input type="radio" name="rim" value="180"> LEO 18X8<br>
+  <input type="radio" name="rim" value="175">APOLLO 18X8<br>
+  <input type="radio" name="rim" value="170">ORION 17X7.5<br>
+  <input type="radio" name="rim" value="170">ARIES 17X7.5<br>
+</div>
+
+<br><br>
+<div class="element l2"><p>Tires</p><input type="radio" name="wheel" value="240"> Blizzak DM-12<br>
+  <input type="radio" name="wheel" value="250">Latitude X-ICE<br>
+  <input type="radio" name="wheel" value="245">Ice Zero<br>
+  <input type="radio" name="wheel" value="236">Observe GSI<br>
+</div>
+</div>
+</body>
+</html>
