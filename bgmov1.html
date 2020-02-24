@@ -1,0 +1,57 @@
+<html>
+<head>
+<style>
+* 
+{ 
+	margin: 0;
+      	padding: 0;
+}
+
+.hero
+{
+	height: 100vh;
+	width: 100%;
+ 	background-image: url(img/view-of-sunset-2248523.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.highway
+{
+	height: 387px;
+	width: 100%;
+	display: block;
+ 	background-image: url(img/view-of-sunset-2248523a.jpg);
+	position: absolute;
+	transform:scale(1.1);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-repeat: no repeat;
+	animation: sea 5s linear infinite;
+}
+
+@keyframes sea
+{
+	100%{
+		transform: translateX(-10px);	
+	}
+}
+
+
+
+</style>
+
+</head>
+<body>
+	<div class="hero">
+		<div class="highway"></div>
+		
+
+		
+	</div>
+</body>
+</html>
