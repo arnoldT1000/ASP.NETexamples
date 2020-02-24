@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function matchpass(){
+var firstpassword=document.getElementById("password").value;
+var secondpassword=document.getElementById("password2").value;
+
+if(firstpassword==secondpassword){
+alert("password same!");
+return true;
+}
+else{
+alert("password must be same!");
+return false;
+}
+}
+</script>
+<style>
+label .email{
+      width:25px;
+}
+INPUT:not([type="radio"]):not([type="checkbox"]) + LABEL {
+    width: 100px;
+}
+
+INPUT:not([type="radio"]):not([type="checkbox"]) {
+    width: 150px;
+}
+
+LABEL { 
+    display: inline-block;
+    float: left;
+}
+
+BR {
+    clear: both;
+}
+</style>
+</head>
+<body>
+
+
+
+<form>
+    <input type="password" id="password" pattern=".{4,}" title="Four or more characters" />
+    <label for="password">Password</label>
+    <br /><br />
+    <input type="password" id="password2" pattern=".{4,}" title="Four or more characters" />
+    <label for="password2">Re-enter Password</label>
+    <br /><br />
+    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters@characters.domain"/>
+    <label for="email">Email:</label>
+
+    <br /><br /><button id="b1" onclick="matchpass()" value="">button</button>
+
+</form>
+
+</body>
+</html>
