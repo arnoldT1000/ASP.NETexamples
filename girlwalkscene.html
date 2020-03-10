@@ -1,0 +1,64 @@
+<html><head>
+<style> 
+* { 
+	margin: 0;
+	padding: 0;
+   }
+
+
+
+.hero {  
+	height: 100vh;
+	width: 100%;
+	background-image: url(img/beach-219810_640.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	overflow-x: hidden;
+	
+   }
+
+
+.girl
+{
+	position: absolute;
+	bottom: 300px;
+	background: url(img/girl.webp);
+	width: 256px;
+	height:256px;
+	animation: walk 1s steps(6) infinite,
+		forward 5s linear infinite;
+}
+
+@keyframes walk
+{
+	    0% { 
+		background-position: 0px;
+	           }
+	100% { 
+		background-position: 1536px;
+	           }
+}	
+
+@keyframes forward
+{
+	    0% { 
+		transform:translateX(-100px);
+	           }
+	100% { 
+		transform:translateX(1200px);
+	           }
+}	
+
+
+</style>
+</head>
+<body>
+	<div class="hero">
+		
+		<div class="girl"></div>
+		
+		
+	</div>
+</body>
+</html>
