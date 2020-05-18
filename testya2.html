@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #65DDEF;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  
+  color: white;
+}
+
+h2 {
+   font-size: 50px;
+   text-align: center;
+}
+
+nav ul {
+  
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a {
+  
+  display: block;
+  padding: 8px;
+  //background-color: #dddddd;
+  //text-align: center;
+}
+
+ol {
+  text-align: left;
+  left: 20px;
+  margin: 20px;
+  padding: 20px;
+ 
+}
+
+/* Create two columns/boxes that floats next to each other */
+aside {
+  float: left;
+  width: 10%;
+  height: 400px; /* only for demonstration, should be removed */
+  background: #C9F6FF;
+  padding: 5px;
+  
+}
+
+/* Style the list inside the menu */
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside ol {
+ 
+  text-align:left;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 90%;
+  background-color: #f1f1f1;
+  height: 400px; /* only for demonstration, should be removed */
+  
+  
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div.ex1 {
+  
+  height: 370px;
+  width: 98%;
+  overflow-y: scroll;
+  
+}
+
+div.img1 {
+   padding: 2px;
+   float:left;
+   width: 33%;
+   height: 300px;
+}
+
+div.img2 {
+   padding:2px;
+   float:left;
+   width: 33%;
+   height: 300px;
+}
+
+div.img3 {
+   padding:2px;
+   float:right;
+   width: 33%;
+   height: 300px;
+}
+/* Style the footer */
+footer {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  aside, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+div.gallery {
+  
+  
+  padding: 7px;
+  float:left;
+  width: 33%;
+  height: 350px;
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Cities</h2>
+    <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+    </nav>
+  
+</header>
+
+<section>
+  
+  
+  <article>
+<div class="ex1" style="padding: 2px;">
+    
+<div class="gallery">
+    <a target="_blank" href="#">
+      <img src="gettyimages-844050350-612x612.jpg" alt="London" width="300" height="300">
+    </a>
+    <div class="desc">London</div><br/>
+    <a href="#" style="margin:auto; text-align:center; display:block;">London</a>
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="#">
+      <img src="598.jpg" alt="Paris" width="300" height="300">
+    </a>
+    <div class="desc">Paris</div><br/>
+    <a href="#" style="margin:auto; text-align:center; display:block;">Paris</a>
+
+</div>
+
+<div class="gallery">
+    <a target="_blank" href="#">
+      <img src="tokyo-skyline-night1-1024x683.jpg" alt="Toyko" width="300" height="300">
+    </a>
+    <div class="desc">Toyko</div><br/>
+    <a href="#" style="margin:auto; text-align:center; display:block;">Toyko</a>
+</div>
+
+</div>
+  </article>
+<aside>
+    <ol>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ol>
+  </aside>
+</section>
+
+<footer>
+  <p>&copy; 2019<p>
+</footer>
+
+</body>
+</html>
