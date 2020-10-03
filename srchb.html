@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 300px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  width: 300px;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+#myDIV {
+  
+  padding: 10px 0;
+  
+  
+  
+}
+</style>
+</head>
+<body>
+
+
+<input type="text" id="myInput" placeholder="Search for pages.." title="Type in a word">
+<button onclick="myFunction()">Search</button>
+
+<div style="display:none;" id="myDIV">
+<ul id="myUL">
+  
+  <li><a href="clothing.html">Clothing</a></li>
+  <li><a href="equipment.html">Equipment</a></li>
+  <li><a href="rackets.html">Rackets</a></li>
+  <li><a href="shoes.html">Shoes</a></li>
+</ul>
+</div>
+
+<!--for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+-->
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+  var x = document.getElementById("myDIV");
+  
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+
+  
+    x.style.display = "block";
+  
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) 
+        {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+    
+}
+</script>
+
+</body>
+</html>
