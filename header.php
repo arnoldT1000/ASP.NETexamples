@@ -51,7 +51,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php astra_header_after(); ?>
 
 	<?php astra_content_before(); ?>
-
+	
+	<h1 style="text-align:center;">
+	<?php wrMsg(); ?>
+	</h1>
+	<br>
+	
 	<div id="content" class="site-content">
 
 		<div class="ast-container">
