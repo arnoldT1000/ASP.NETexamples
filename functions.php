@@ -157,3 +157,45 @@ if ( version_compare( PHP_VERSION, '5.3', '>=' ) ) {
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
+
+function owt_login_input_form() {
+	<p>
+		<label for="txtName">Name</label>
+		<input type="text" class="input" size="25" value="" />
+	</p>
+	<p>
+		<label for="txtPhone">Phone No</label>
+		<input type="text" class="input" size="25" value="" />
+	</p>
+}
+add_action('login_form','owt_login_input_form');
+
+function owt_head_file_css() {
+	echo '<link rel="stylesheet" href="'.plugin_dir_url(__FILE__) . 'assets/css/header_owt.css" />';
+}
+
+add_action("wp_head","owt_head_file_css");
+
+function owt_footer_file_js() {
+	echo '<script src="'.plugin_dir_url(__FILE__) . 'assets/js/footer_owt.js" />';
+}
+
+add_action("wp_footer","owt_footer_file_js");
+
+function getContent($content) {
+	$content = '<div style="background-color:white; color:black; padding:24px;">'.$content.'</div>'
+	return $content;
+}
+
+add_filter('the_content','getContent');
+
+function wpsay_title($title) {
+	return 'hooked: ' .$title;
+}
+
+add_filter('the_title','wpsay_title');
+
+function wrMsg() {
+	$msg = 'Welcome to DNK';
+	echo $msg;
+}
