@@ -1,7 +1,0 @@
-C:\Users\Z77\source\repos\SampleWebApplication\SampleWebApplication\bin\Debug\SampleWebApplication.exe.config
-C:\Users\Z77\source\repos\SampleWebApplication\SampleWebApplication\bin\Debug\SampleWebApplication.exe
-C:\Users\Z77\source\repos\SampleWebApplication\SampleWebApplication\bin\Debug\SampleWebApplication.pdb
-C:\Users\Z77\source\repos\SampleWebApplication\SampleWebApplication\obj\Debug\SampleWebApplication.csprojAssemblyReference.cache
-C:\Users\Z77\source\repos\SampleWebApplication\SampleWebApplication\obj\Debug\SampleWebApplication.csproj.CoreCompileInputs.cache
-C:\Users\Z77\source\repos\SampleWebApplication\SampleWebApplication\obj\Debug\SampleWebApplication.exe
-C:\Users\Z77\source\repos\SampleWebApplication\SampleWebApplication\obj\Debug\SampleWebApplication.pdb
