@@ -12,7 +12,7 @@ PRIMARY KEY  (id));";
  
 require_once (ABSPATH .'wp-admin/includes/upgrade.php');
 dbDelta($sql);
-//$res=$ndb->query("ALTER TABLE $table_name ADD img varchar(100)");
+
 
 
 ?>
