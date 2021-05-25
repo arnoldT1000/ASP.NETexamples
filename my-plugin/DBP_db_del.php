@@ -4,6 +4,7 @@ $ndb= new wpdb('epiz_27737563','dBwY0IdTHGzW','epiz_27737563_w405','sql109.epizy
 $ndb->set_prefix('wpup_');
 //$table_name="wpup_posts";
 $table_name=$ndb->prefix.'test';
+//delete row where id=2
 $res=$ndb->delete(
 "wpup_test", 
 array(
