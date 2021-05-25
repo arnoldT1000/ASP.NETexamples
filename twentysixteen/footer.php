@@ -59,7 +59,7 @@
 				?>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>" class="imprint">
 					<?php
-                    include_once('add_sect.php');
+                    
 					/* translators: %s: WordPress */
 					printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' );
 					?>

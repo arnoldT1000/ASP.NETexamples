@@ -45,6 +45,7 @@
 						<p class="site-description"><?php echo $description; ?></p>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
+                <?php include_once 'add_sect.php';?>
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>

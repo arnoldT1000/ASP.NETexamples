@@ -595,6 +595,8 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
+    
+
 function load_js_assets() {
     if( is_page( sample-page ) ) {
         wp_enqueue_script('jquery', get_template_directory_uri(). '/js/jquery.js');

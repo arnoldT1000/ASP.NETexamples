@@ -1,4 +1,1 @@
-<div class="showing">
-    this is test
-
-</div>
+<div id="thediv" style="width:150px;display:none;border:2px solid #0b6e65;margin:20px;text-align:center;padding:10px;"><a href="http://tech999.epizy.com/?i=1" style="font-family:sans-serif;text-decoration:none;color:#0b6e65;font-weight:700;">HOME</a></div>
