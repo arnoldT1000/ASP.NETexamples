@@ -4,6 +4,7 @@ $ndb= new wpdb('epiz_27737563','dBwY0IdTHGzW','epiz_27737563_w405','sql109.epizy
 $ndb->set_prefix('wpup_');
 //$table_name="wpup_posts";
 $table_name=$ndb->prefix.'posts';
+//get single row with id=1
 $res=$ndb->get_row("SELECT * FROM $table_name WHERE id=1");
 ?>
 
