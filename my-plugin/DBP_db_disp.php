@@ -4,7 +4,9 @@ $ndb= new wpdb('epiz_27737563','dBwY0IdTHGzW','epiz_27737563_w405','sql109.epizy
 $ndb->set_prefix('wpup_');
 //$table_name="wpup_posts";
 $table_name=$ndb->prefix.'test2';
-	$sql= "CREATE TABLE $table_name (id mediumint(9) NOT NULL AUTO_INCREMENT, 
+
+//sql statement to create table named test2 with fields username,password,email 
+$sql= "CREATE TABLE $table_name (id mediumint(9) NOT NULL AUTO_INCREMENT, 
 username varchar(100),
 password varchar(100),
 email varchar (100),
