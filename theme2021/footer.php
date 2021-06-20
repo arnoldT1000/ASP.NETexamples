@@ -1,18 +1,29 @@
 
+        <p style="padding: 2px;color:black;">
+             
+            <?php 
+                $result=comicpress_copyright(); 
+                                
+                
+                foreach ( $result as $key => $value )
+                {
+                    echo "$key = $value <br />";
+                }
+
+            ?>
+        </p>
+        
         <!-- footer -->
-			<footer>
-				<div class="wrapper">
+			<footer class="w3-container w3-blue w3-padding-64 w3-center w3-opacity">
+				
 					
-                    <div class="wrap-col">
+                    
 						<h2>For Reservations: <span>1-800 123 45 67</span></h2>
 						Designed by <a rel="nofollow" href="http://tech999.epizy.com/" target="_blank">Classico</a> 
-					</div>
+					    
+                        
                     
-					
-				</div>
-				<!-- {%FOOTER_LINK} -->
-
-                
+					              
 		        
 			</footer>
 <!-- / footer -->
